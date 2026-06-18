@@ -4,59 +4,218 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Terms of Service — lifterLog</title>
+<meta name="description" content="The terms that govern your use of the lifterLog app.">
 <style>
-  :root { color-scheme: light dark; }
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-         max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; line-height: 1.65;
-         color: #1c1c2e; background: #fff; }
-  @media (prefers-color-scheme: dark) { body { color: #f0f0ff; background: #0d0d14; } h1, h2 { color: #fff; } .muted { color: #9090b0; } }
-  h1 { font-size: 28px; margin-bottom: 4px; }
-  h2 { font-size: 17px; margin-top: 28px; margin-bottom: 8px; }
-  p { margin: 0 0 12px; font-size: 15px; }
-  .muted { color: #555; font-size: 13px; margin-bottom: 28px; }
+  :root {
+    color-scheme: light dark;
+    --bg: #eef0f7;
+    --card: #ffffff;
+    --text: #1c1c2e;
+    --muted: #6b6b85;
+    --border: #ececf3;
+    --accent: #6d5efc;
+    --accent-2: #9b5cff;
+    --accent-soft: #f0edff;
+    --shadow: 0 18px 50px -24px rgba(40, 30, 90, .35);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #07070c;
+      --card: #14141e;
+      --text: #f0f0ff;
+      --muted: #9090b0;
+      --border: #25252f;
+      --accent: #8a7bff;
+      --accent-2: #b48bff;
+      --accent-soft: #1c1a2e;
+      --shadow: 0 18px 50px -20px rgba(0, 0, 0, .7);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    background:
+      radial-gradient(1100px 520px at 50% -8%, var(--accent-soft), transparent 60%),
+      var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 72px; }
+
+  /* ── Brand bar ─────────────────────────────────────────── */
+  .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 34px; }
+  .logo {
+    width: 40px; height: 40px; border-radius: 12px; flex: none;
+    display: grid; place-items: center;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    box-shadow: 0 8px 20px -8px var(--accent);
+  }
+  .logo svg { width: 24px; height: 24px; }
+  .brand-name { font-size: 18px; font-weight: 700; letter-spacing: -.2px; }
+  .brand-name b { color: var(--accent); font-weight: 700; }
+
+  /* ── Card ─────────────────────────────────────────────── */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 44px 40px 40px;
+    box-shadow: var(--shadow);
+  }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: 12px; font-weight: 600; letter-spacing: .8px; text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 5px 11px; border-radius: 999px;
+    margin-bottom: 16px;
+  }
+  h1 { font-size: 34px; line-height: 1.15; letter-spacing: -.5px; margin: 0 0 12px; }
+  .meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; color: var(--muted); font-size: 13px; margin-bottom: 26px; }
+  .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--muted); opacity: .6; }
+  .lead {
+    font-size: 17px; color: var(--text);
+    padding: 18px 20px; margin: 0 0 8px;
+    background: var(--accent-soft);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+  }
+
+  /* ── Sections w/ numbered badges via CSS counter ───────── */
+  main { counter-reset: section; }
+  section { padding-top: 30px; }
+  section + section { border-top: 1px solid var(--border); }
+  h2 {
+    counter-increment: section;
+    display: flex; align-items: center; gap: 12px;
+    font-size: 19px; letter-spacing: -.2px;
+    margin: 0 0 12px;
+  }
+  h2::before {
+    content: counter(section);
+    flex: none;
+    width: 28px; height: 28px; border-radius: 9px;
+    display: grid; place-items: center;
+    font-size: 13px; font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  }
+  p { margin: 0 0 12px; font-size: 15.5px; }
+  p:last-child { margin-bottom: 0; }
+  a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  a:hover { text-decoration: underline; }
+
+  /* ── Footer ────────────────────────────────────────────── */
+  footer { margin-top: 32px; text-align: center; color: var(--muted); font-size: 13.5px; }
+  .links { display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: center; margin-bottom: 14px; }
+  .links a { font-size: 14px; }
+
+  @media (max-width: 560px) {
+    .card { padding: 30px 22px; border-radius: 18px; }
+    h1 { font-size: 27px; }
+    .wrap { padding: 28px 14px 56px; }
+  }
 </style>
 </head>
 <body>
-<h1>Terms of Service</h1>
-<p class="muted">lifterLog · Effective June 12, 2026</p>
+<div class="wrap">
 
-<p>These Terms of Service ("Terms") govern your use of the lifterLog mobile application ("the App"). By creating an account or using the App you agree to these Terms. If you do not agree, do not use the App.</p>
+  <div class="brand">
+    <span class="logo" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="#fff">
+        <rect x="1" y="9" width="3" height="6" rx="1.2"/>
+        <rect x="4.2" y="6.5" width="2.6" height="11" rx="1.1"/>
+        <rect x="6.6" y="10.7" width="10.8" height="2.6" rx="1.1"/>
+        <rect x="17.2" y="6.5" width="2.6" height="11" rx="1.1"/>
+        <rect x="20" y="9" width="3" height="6" rx="1.2"/>
+      </svg>
+    </span>
+    <span class="brand-name">lifter<b>Log</b></span>
+  </div>
 
-<h2>1. The Service</h2>
-<p>lifterLog is a workout tracking application. It lets you log exercises, sets and sessions, build workouts, view progress statistics, and import training data from files or photos using AI-assisted parsing.</p>
+  <div class="card">
+    <span class="eyebrow">Legal</span>
+    <h1>Terms of Service</h1>
+    <div class="meta"><span>lifterLog</span><span class="dot"></span><span>Effective June 12, 2026</span></div>
 
-<h2>2. Accounts</h2>
-<p>You must provide accurate information when creating an account and keep your password confidential. You are responsible for all activity under your account. You must be at least 16 years old (or the age of digital consent in your country) to use the App.</p>
+    <p class="lead">These Terms of Service ("Terms") govern your use of the lifterLog mobile application ("the App"). By creating an account or using the App you agree to these Terms. If you do not agree, do not use the App.</p>
 
-<h2>3. Subscriptions &amp; Free Trial</h2>
-<p>New accounts receive a 7-day free trial with full access. After the trial, continued use requires a paid subscription (lifterLog Pro), offered as a monthly or annual auto-renewing plan.</p>
-<p>Subscriptions are purchased through, billed by, and managed in your Apple App Store or Google Play account. They renew automatically unless cancelled at least 24 hours before the end of the current period. You can cancel anytime in your store account settings; access continues until the end of the paid period.</p>
-<p>Refunds are handled by Apple or Google under their respective policies — we cannot issue refunds directly. Prices may change; changes apply only to subsequent renewal periods and the store will notify you as required.</p>
+    <main>
+      <section>
+        <h2>The Service</h2>
+        <p>lifterLog is a workout tracking application. It lets you log exercises, sets and sessions, build workouts, view progress statistics, and import training data from files or photos using AI-assisted parsing.</p>
+      </section>
 
-<h2>4. Your Content</h2>
-<p>Your training data (exercises, sets, workouts, body metrics, and files you upload) belongs to you. You grant us the limited right to store and process it solely to provide the App's features.</p>
-<p>When you use the AI import feature, the file or photo you submit is processed by an AI provider on our behalf to extract workout data (see the Privacy Policy). Do not upload content you do not have the right to share.</p>
+      <section>
+        <h2>Accounts</h2>
+        <p>You must provide accurate information when creating an account and keep your password confidential. You are responsible for all activity under your account. You must be at least 16 years old (or the age of digital consent in your country) to use the App.</p>
+      </section>
 
-<h2>5. AI Features</h2>
-<p>AI-parsed results can be inaccurate or incomplete. Always review imported data before relying on it. AI output is provided "as is" without any guarantee of accuracy.</p>
+      <section>
+        <h2>Subscriptions &amp; Free Trial</h2>
+        <p>New accounts receive a 7-day free trial with full access. After the trial, continued use requires a paid subscription (lifterLog Pro), offered as a monthly or annual auto-renewing plan.</p>
+        <p>Subscriptions are purchased through, billed by, and managed in your Apple App Store or Google Play account. They renew automatically unless cancelled at least 24 hours before the end of the current period. You can cancel anytime in your store account settings; access continues until the end of the paid period.</p>
+        <p>Refunds are handled by Apple or Google under their respective policies — we cannot issue refunds directly. Prices may change; changes apply only to subsequent renewal periods and the store will notify you as required.</p>
+      </section>
 
-<h2>6. Not Medical Advice</h2>
-<p>The App provides workout tracking and statistics for informational purposes only. It is not medical, health, or professional fitness advice. Consult a qualified professional before starting or changing a training programme. You exercise at your own risk.</p>
+      <section>
+        <h2>Your Content</h2>
+        <p>Your training data (exercises, sets, workouts, body metrics, and files you upload) belongs to you. You grant us the limited right to store and process it solely to provide the App's features.</p>
+        <p>When you use the AI import feature, the file or photo you submit is processed by an AI provider on our behalf to extract workout data (see the Privacy Policy). Do not upload content you do not have the right to share.</p>
+      </section>
 
-<h2>7. Acceptable Use</h2>
-<p>You agree not to misuse the App, including: attempting to access other users' data, probing or disrupting our systems, reverse engineering the App except where permitted by law, using the App for unlawful purposes, or reselling access.</p>
+      <section>
+        <h2>AI Features</h2>
+        <p>AI-parsed results can be inaccurate or incomplete. Always review imported data before relying on it. AI output is provided "as is" without any guarantee of accuracy.</p>
+      </section>
 
-<h2>8. Termination</h2>
-<p>You may delete your account at any time in Profile → Settings → Delete account, which permanently erases your data. We may suspend or terminate accounts that violate these Terms. Deleting your account does not automatically cancel a store subscription — cancel it in your App Store or Google Play settings.</p>
+      <section>
+        <h2>Not Medical Advice</h2>
+        <p>The App provides workout tracking and statistics for informational purposes only. It is not medical, health, or professional fitness advice. Consult a qualified professional before starting or changing a training programme. You exercise at your own risk.</p>
+      </section>
 
-<h2>9. Disclaimers &amp; Limitation of Liability</h2>
-<p>The App is provided "as is" and "as available" without warranties of any kind, express or implied. To the maximum extent permitted by law, we are not liable for indirect, incidental, special, consequential, or punitive damages, or for loss of data, arising from your use of the App. Our total liability for any claim is limited to the amount you paid us in the 12 months before the claim.</p>
-<p>Nothing in these Terms excludes liability that cannot be excluded under applicable law.</p>
+      <section>
+        <h2>Acceptable Use</h2>
+        <p>You agree not to misuse the App, including: attempting to access other users' data, probing or disrupting our systems, reverse engineering the App except where permitted by law, using the App for unlawful purposes, or reselling access.</p>
+      </section>
 
-<h2>10. Changes to These Terms</h2>
-<p>We may update these Terms from time to time. Material changes will be announced in the App or by email. Continued use after changes take effect constitutes acceptance.</p>
+      <section>
+        <h2>Termination</h2>
+        <p>You may delete your account at any time in Profile → Settings → Delete account, which permanently erases your data. We may suspend or terminate accounts that violate these Terms. Deleting your account does not automatically cancel a store subscription — cancel it in your App Store or Google Play settings.</p>
+      </section>
 
-<h2>11. Contact</h2>
-<p>Questions about these Terms: support@lifterlog.app</p>
+      <section>
+        <h2>Disclaimers &amp; Limitation of Liability</h2>
+        <p>The App is provided "as is" and "as available" without warranties of any kind, express or implied. To the maximum extent permitted by law, we are not liable for indirect, incidental, special, consequential, or punitive damages, or for loss of data, arising from your use of the App. Our total liability for any claim is limited to the amount you paid us in the 12 months before the claim.</p>
+        <p>Nothing in these Terms excludes liability that cannot be excluded under applicable law.</p>
+      </section>
+
+      <section>
+        <h2>Changes to These Terms</h2>
+        <p>We may update these Terms from time to time. Material changes will be announced in the App or by email. Continued use after changes take effect constitutes acceptance.</p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>Questions about these Terms: <a href="mailto:support@lifterlog.app">support@lifterlog.app</a></p>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="links">
+      <a href="/privacy">Privacy Policy</a>
+      <a href="mailto:support@lifterlog.app">Contact</a>
+    </div>
+    © 2026 lifterLog. All rights reserved.
+  </footer>
+
+</div>
 </body>
 </html>
