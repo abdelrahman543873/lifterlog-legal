@@ -143,7 +143,7 @@
   <div class="card">
     <span class="eyebrow">Privacy</span>
     <h1>Privacy Policy</h1>
-    <div class="meta"><span>lifterLog</span><span class="dot"></span><span>Effective September 24, 2026</span></div>
+    <div class="meta"><span>lifterLog</span><span class="dot"></span><span>Effective October 4, 2026</span></div>
 
     <p class="lead">This Privacy Policy explains what data lifterLog ("the App") collects, how it is used, and the choices you have. We collect only what the App needs to work — we do not sell your data and we do not show ads.</p>
 
@@ -153,6 +153,7 @@
         <p>Account data: name, email address, and a securely hashed password (we never store your password in plain text).</p>
         <p>Training data you enter: exercises, sets, repetitions, weights, workouts, session history, and optional body metrics (weight, height) and unit preferences.</p>
         <p>Files and photos you choose to import: spreadsheets, documents, or images of workout plans, processed to extract training data.</p>
+        <p>Body scans and measurements you add: InBody or DEXA reports you upload (photos or PDF files), the values read from them or entered by you, and tape measurements (for example waist, arms and legs).</p>
         <p>Subscription status: your plan, trial and renewal dates. Payment details (card numbers, billing address) are handled entirely by Apple or Google — we never receive them.</p>
         <p>Feature requests &amp; issues board: posts you write (title, details and any screenshots you attach), the app language you were using and, for issue reports, your platform and app version; your votes; and the posts and authors you hide or report.</p>
       </section>
@@ -167,19 +168,26 @@
       </section>
 
       <section>
+        <h2>Body Scans and Measurements</h2>
+        <p>When you upload an InBody or DEXA report, the file is sent to Anthropic (Claude API), our AI processing provider, solely to read the numbers on it. Per Anthropic's API terms, API inputs are not used to train their models. The values are saved to your account automatically; values the AI wasn't sure about, or couldn't read, are marked for you to check, and you can correct or delete any value.</p>
+        <p>We keep the values and the original files you uploaded, private to your account. Original files are stored in a private, encrypted storage bucket that only the App's servers can access, and are shown only to you. When a newly read scan is your most recent weight reading, the App also updates the body weight in your profile.</p>
+        <p>Body composition results and measurements can be health data. Adding them is your choice, they are used only to show your progress to you, and they are never sold, used for advertising, or sent to our analytics or crash-reporting tools. You can delete any scan or measurement, or all of your scans at once (Analytics → Body → ⋯ → Delete all scans), at any time; deleting your account erases all of them, including the original files.</p>
+      </section>
+
+      <section>
         <h2>Who We Share Data With</h2>
-        <p>We share data only with the service providers needed to run the App: Anthropic (AI parsing of files you submit and automated checks of board posts), RevenueCat (subscription management), Apple / Google (payment processing), and our hosting provider (encrypted storage of the database). We never sell personal data and never share it for advertising.</p>
+        <p>We share data only with the service providers needed to run the App: Anthropic (AI parsing of files you submit, including body scan reports, and automated checks of board posts), RevenueCat (subscription management), Apple / Google (payment processing), and our hosting provider (encrypted storage of the database and of the body scan files you upload). We never sell personal data and never share it for advertising.</p>
       </section>
 
       <section>
         <h2>Crash &amp; Error Reporting (Sentry)</h2>
         <p>The App uses Sentry, a third-party crash and error reporting service, to detect and fix problems. When you use the App, Sentry automatically collects: crash and error reports with stack traces; performance and diagnostics data (app startup time, navigation timing, network request metrics); device and operating-system information and the app version; and privacy-masked session replays (by default 10% of sessions, and 100% of sessions where an error occurs).</p>
-        <p>Session replays are privacy-masked at capture — all on-screen text and images are blocked, so passwords, payment details, and your training data are never recorded. When you are signed in, crash and diagnostics reports are associated with your account id and email so we can correlate an issue to an affected account; this association is cleared when you sign out. Sentry processes this data on our behalf solely to keep the App stable; it is not used for advertising.</p>
+        <p>Session replays are privacy-masked at capture — all on-screen text and images are blocked, so passwords, payment details, your training data and your body data are never recorded. When you are signed in, crash and diagnostics reports are associated with your account id and email so we can correlate an issue to an affected account; this association is cleared when you sign out. Sentry processes this data on our behalf solely to keep the App stable; it is not used for advertising.</p>
       </section>
 
       <section>
         <h2>Data Retention</h2>
-        <p>Your data is kept while your account exists. Deleting your account (Profile → Settings → Delete account) permanently and immediately erases your account, training data, preferences, and subscription record from our database. Store billing records are retained by Apple/Google under their policies.</p>
+        <p>Your data is kept while your account exists. Deleting your account (Profile → Settings → Delete account) permanently and immediately erases your account, training data, body scans and measurements (including the original files you uploaded), preferences, and subscription record. Store billing records are retained by Apple/Google under their policies.</p>
         <p>Posts and votes on the feature requests &amp; issues board are the exception: when you delete your account they stay on the board, unlinked from you and without any identifier, so the community's votes are not lost. You can delete any of your posts yourself at any time from the post's menu. The posts and authors you chose to hide are deleted with your account.</p>
       </section>
 
