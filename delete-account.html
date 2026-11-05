@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delete Your Account — lifterLog</title>
+<meta name="description" content="How to delete your Lifter Log account and data, in the app or by email, without reinstalling the app.">
+<link rel="canonical" href="https://legal.lifterlog.app/delete-account">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #eef0f7;
+    --card: #ffffff;
+    --text: #1c1c2e;
+    --muted: #6b6b85;
+    --border: #ececf3;
+    --accent: #7c4dff;
+    --accent-2: #00e5ff;
+    --accent-soft: #f0edff;
+    --shadow: 0 18px 50px -24px rgba(40, 30, 90, .35);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #07070c;
+      --card: #14141e;
+      --text: #f0f0ff;
+      --muted: #9090b0;
+      --border: #25252f;
+      --accent: #9c6fff;
+      --accent-2: #00e5ff;
+      --accent-soft: #1c1a2e;
+      --shadow: 0 18px 50px -20px rgba(0, 0, 0, .7);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    background:
+      radial-gradient(1100px 520px at 50% -8%, var(--accent-soft), transparent 60%),
+      var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 72px; }
+
+  /* ── Brand bar ─────────────────────────────────────────── */
+  .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 34px; }
+  .logo {
+    width: 40px; height: 40px; border-radius: 12px; flex: none;
+    display: grid; place-items: center;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    box-shadow: 0 8px 20px -8px var(--accent);
+  }
+  .logo svg { width: 24px; height: 24px; }
+  .brand-name { font-size: 18px; font-weight: 700; letter-spacing: -.2px; }
+  .brand-name b { color: var(--accent); font-weight: 700; }
+
+  /* ── Card ─────────────────────────────────────────────── */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 44px 40px 40px;
+    box-shadow: var(--shadow);
+  }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: 12px; font-weight: 600; letter-spacing: .8px; text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 5px 11px; border-radius: 999px;
+    margin-bottom: 16px;
+  }
+  h1 { font-size: 34px; line-height: 1.15; letter-spacing: -.5px; margin: 0 0 12px; }
+  .meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; color: var(--muted); font-size: 13px; margin-bottom: 26px; }
+  .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--muted); opacity: .6; }
+  .lead {
+    font-size: 17px; color: var(--text);
+    padding: 18px 20px; margin: 0 0 8px;
+    background: var(--accent-soft);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+  }
+
+  /* ── Sections w/ numbered badges via CSS counter ───────── */
+  main { counter-reset: section; }
+  section { padding-top: 30px; }
+  section + section { border-top: 1px solid var(--border); margin-top: 30px; }
+  h2 {
+    counter-increment: section;
+    display: flex; align-items: center; gap: 12px;
+    font-size: 19px; letter-spacing: -.2px;
+    margin: 0 0 12px;
+  }
+  h2::before {
+    content: counter(section);
+    flex: none;
+    width: 28px; height: 28px; border-radius: 9px;
+    display: grid; place-items: center;
+    font-size: 13px; font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  }
+  p { margin: 0 0 12px; font-size: 15.5px; }
+  p:last-child { margin-bottom: 0; }
+  ul { margin: 0 0 12px; padding-left: 20px; font-size: 15.5px; }
+  ul:last-child { margin-bottom: 0; }
+  li { margin-bottom: 8px; }
+  li:last-child { margin-bottom: 0; }
+  a { color: var(--accent); text-decoration: none; font-weight: 600; overflow-wrap: anywhere; }
+  a:hover { text-decoration: underline; }
+
+  /* ── Footer ────────────────────────────────────────────── */
+  footer { margin-top: 32px; text-align: center; color: var(--muted); font-size: 13.5px; }
+  .links { display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: center; margin-bottom: 14px; }
+  .links a { font-size: 14px; }
+
+  @media (max-width: 560px) {
+    .card { padding: 30px 22px; border-radius: 18px; }
+    h1 { font-size: 27px; }
+    .wrap { padding: 28px 14px 56px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="brand">
+    <span class="logo" aria-hidden="true">
+      <svg viewBox="0 0 32 32">
+        <g fill="none" stroke="#fff" stroke-width="2.7" stroke-linecap="round">
+          <line x1="5" y1="11.5" x2="16" y2="11.5"/>
+          <line x1="5" y1="17.5" x2="26" y2="17.5"/>
+          <line x1="5" y1="23.5" x2="20.5" y2="23.5"/>
+        </g>
+        <path d="M23 3.4 C23 6.06 25.34 8 28 8 C25.34 8 23 9.94 23 12.6 C23 9.94 20.66 8 18 8 C20.66 8 23 6.06 23 3.4 Z" fill="#fff"/>
+      </svg>
+    </span>
+    <span class="brand-name">lifter<b>Log</b></span>
+  </div>
+
+  <div class="card">
+    <span class="eyebrow">Account</span>
+    <h1>Delete your account</h1>
+    <div class="meta"><span>Lifter Log – Workout Tracker</span><span class="dot"></span><span>Updated November 5, 2026</span></div>
+
+    <p class="lead">This page explains how to delete your account and data from Lifter Log – Workout Tracker (lifterLog). You can do it in the app, or email us if you no longer have the app. You don't need to reinstall it.</p>
+
+    <main>
+      <section id="in-app">
+        <h2>Delete it in the app</h2>
+        <p>Open the Profile tab and tap Delete account. If the app is showing the subscription screen, open Account &amp; data there and tap Delete account. If your account has a password, you'll be asked to confirm it. Your account is erased right away.</p>
+      </section>
+
+      <section id="email">
+        <h2>Delete it by email</h2>
+        <p>Email <a href="mailto:support@lifterlog.app?subject=Delete%20my%20account">support@lifterlog.app</a> from the address on your account, with the subject "Delete my account". We'll check that the request is yours and delete the account within 30 days.</p>
+        <p>If you can't send from that address, for example because you hid your email when signing in with Apple, say so in your message and we'll find another way to confirm the account is yours.</p>
+      </section>
+
+      <section id="subscription">
+        <h2>Cancel your subscription first</h2>
+        <p>Deleting your account does not cancel a store subscription. Cancel it in your App Store or Google Play settings as well.</p>
+      </section>
+
+      <section id="erased">
+        <h2>What is erased</h2>
+        <p>Your account, training data, body scans and measurements, preferences, and subscription record. The original body scan files you uploaded (InBody and DEXA photos and PDFs) are removed from our storage at the same time.</p>
+      </section>
+
+      <section id="kept">
+        <h2>What is kept</h2>
+        <ul>
+          <li><strong>Store billing records:</strong> kept by Apple and Google under their own policies.</li>
+          <li><strong>Posts, replies and votes on the feature requests &amp; issues board:</strong> these stay on the board, unlinked from you and without any identifier. You can delete your own posts and replies from their menu before deleting your account.</li>
+          <li><strong>Usage data at our analytics and crash-reporting providers (PostHog and Sentry):</strong> kept for those services' retention periods. Email us if you want the analytics data linked to your account deleted.</li>
+        </ul>
+        <p>Full details are in the <a href="/privacy">Privacy Policy</a>.</p>
+      </section>
+
+      <section id="data">
+        <h2>Delete some data and keep your account</h2>
+        <p>In the app, you can delete:</p>
+        <ul>
+          <li>any single body scan or measurement;</li>
+          <li>all of your scans at once (Analytics → Body → ⋯ → Delete all scans);</li>
+          <li>any of your board posts or replies, from its menu.</li>
+        </ul>
+        <p>For anything else, email <a href="mailto:support@lifterlog.app?subject=Delete%20some%20of%20my%20data">support@lifterlog.app</a> from the address on your account and tell us what you want deleted. We'll do it within 30 days.</p>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="links">
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/terms">Terms of Service</a>
+      <a href="mailto:support@lifterlog.app">Contact</a>
+    </div>
+    © 2026 lifterLog. All rights reserved.
+  </footer>
+
+</div>
+</body>
+</html>

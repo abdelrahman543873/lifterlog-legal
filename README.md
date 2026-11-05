@@ -11,6 +11,11 @@ satisfy that — the same content also lives in the app at
 **Keep in sync:** if you edit one side, edit the other. Source of truth is
 `trainer-mobile/src/content/legal.ts`.
 
+**`delete-account.html`** has no in-app copy, because the app has its own deletion flow. It is the
+account and data deletion URL in Play Console → App content → Data safety
+(`/delete-account` and `/delete-account#data`), so never rename or remove it. Emailed requests:
+`lifter-log-infra/docs/database-access.md` → "Deleting an account on an emailed request".
+
 ## Hosting (pick one, all free)
 
 - **GitHub Pages:** push this `legal/` folder to a repo → Settings → Pages →
